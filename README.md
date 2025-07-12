@@ -1,13 +1,14 @@
 # Three Amigos Travel Vlog Website
 
-A modern, responsive travel vlog website built for three adventurous friends: Wala, Raza, and Abd. This project showcases their travel experiences through beautiful design, engaging content, and smooth animations.
+A modern, responsive travel vlog website built for three adventurous friends: Wala, Raza, and Abd. This project showcases their travel experiences through beautiful design, engaging content, and smooth animations. Features a futuristic "Link in Bio" page with cosmic design elements.
 
 ## 🌟 Project Overview
 
 The Three Amigos website is a comprehensive travel platform featuring:
-- **Six Core Pages**: Home, About, Blog, Shop (Coming Soon), Partners, and Contact
+- **Seven Core Pages**: Home, About, Blog, Shop (Coming Soon), Partners, Contact, and Links
 - **Modern Design**: Clean, responsive layout with premium aesthetics
 - **Smooth Animations**: Powered by Framer Motion for engaging user experience
+- **Futuristic Elements**: Cosmic design for special pages like the Link in Bio
 - **Mobile-First Responsive**: Optimized for all device sizes
 - **SEO Optimized**: Built with Next.js best practices
 
@@ -18,7 +19,7 @@ The Three Amigos website is a comprehensive travel platform featuring:
 - **Animations**: Framer Motion
 - **UI Components**: Shadcn/ui
 - **Icons**: Lucide React
-- **Typography**: Poppins font family
+- **Typography**: Poppins font family + Orbitron for futuristic elements
 - **Development**: TypeScript for type safety
 
 ## 🚀 Quick Start
@@ -30,8 +31,8 @@ The Three Amigos website is a comprehensive travel platform featuring:
 ### Installation
 ```bash
 # Clone the repository
-git clone <repository-url>
-cd three-amigos-travel
+git clone https://github.com/Abdalkaderdev/three-amigos.git
+cd three-amigos
 
 # Install dependencies
 npm install
@@ -51,7 +52,7 @@ npm run lint     # Run ESLint
 ## 📁 Project Structure
 
 ```
-three-amigos-travel/
+three-amigos/
 ├── app/                    # Next.js app directory
 │   ├── globals.css        # Global styles
 │   ├── layout.tsx         # Root layout
@@ -60,7 +61,13 @@ three-amigos-travel/
 │   ├── blog/             # Blog page
 │   ├── shop/             # Shop page
 │   ├── partners/         # Partners page
-│   └── contact/          # Contact page
+│   ├── contact/          # Contact page
+│   ├── links/            # Futuristic Link in Bio page
+│   ├── newsletter/       # Newsletter page
+│   ├── privacy-policy/   # Privacy Policy page
+│   ├── terms-of-service/ # Terms of Service page
+│   ├── cookie-policy/    # Cookie Policy page
+│   └── disclaimer/       # Disclaimer page
 ├── components/           # Reusable components
 │   ├── cards/           # Card components
 │   │   ├── AnimatedCard.tsx
@@ -74,6 +81,8 @@ three-amigos-travel/
 │   ├── ui/              # UI components
 │   │   ├── AnimatedButton.tsx
 │   │   ├── AnimatedIcon.tsx
+│   │   ├── FuturisticLinkButton.tsx
+│   │   ├── CosmicBackground.tsx
 │   │   └── [shadcn components]
 │   └── layout/          # Layout components
 │       ├── Navbar.tsx
@@ -94,11 +103,13 @@ three-amigos-travel/
 - **Primary**: Sky Blue (#00BFFF)
 - **Secondary**: Coral Pink (#FF6F61)
 - **Background**: Soft Beige (#F5F5DC)
+- **Cosmic**: Black (#000000) for futuristic pages
 - **Text**: Various gray shades for hierarchy
 
 ### Typography
 - **Headings**: Poppins Bold (Astrobia style)
 - **Body**: Poppins Regular (300-700 weights)
+- **Futuristic**: Orbitron font for cosmic elements
 - **Spacing**: 8px grid system
 
 ### Components
@@ -106,6 +117,7 @@ three-amigos-travel/
 - Soft shadows for depth
 - Hover animations on interactive elements
 - Consistent spacing and alignment
+- **NEW**: Cosmic glow effects and particle animations
 
 ## 📱 Responsive Design
 
@@ -123,6 +135,25 @@ Powered by Framer Motion with consistent timing and easing:
 - **Hover effects** on cards and buttons
 - **Bouncing airplane** in navigation
 - **Scroll-based animations** for enhanced UX
+- **NEW**: Cosmic particle effects and orbiting elements
+- **NEW**: Glow trail effects and mouse-following parallax
+
+## 🌌 Futuristic Features
+
+### Link in Bio Page (`/links`)
+- **Cosmic background** with animated starfield
+- **Futuristic link buttons** with glow effects
+- **Particle animations** and orbiting elements
+- **Mouse-following parallax** effects
+- **Staggered animations** for smooth page load
+- **Mobile-optimized** cosmic design
+
+### Cosmic Design Elements
+- **Glow effects** on text and buttons
+- **Floating particles** with brand colors
+- **Orbiting planets** and celestial elements
+- **Gradient backgrounds** with animated shifts
+- **Backdrop blur** and glass-morphism effects
 
 ## 🧩 Component Library
 
@@ -135,6 +166,8 @@ Powered by Framer Motion with consistent timing and easing:
 ### UI Elements
 - `AnimatedButton`: Buttons with hover animations
 - `AnimatedIcon`: Icons with various animation types
+- `FuturisticLinkButton`: Cosmic animated link buttons
+- `CosmicBackground`: Starfield and particle effects
 - `HeroSection`: Reusable hero section component
 - `SectionHeader`: Consistent section headers
 
@@ -168,6 +201,7 @@ export default function Component({ prop1, prop2 }: ComponentProps) {
 - Use consistent timing (0.3s for quick, 0.6s for standard)
 - Apply `viewport={{ once: true }}` for scroll animations
 - Use `whileHover` for interactive elements
+- **NEW**: Use cosmic easing for futuristic effects
 
 ## 📈 Performance
 
@@ -175,6 +209,7 @@ export default function Component({ prop1, prop2 }: ComponentProps) {
 - **Image Optimization**: Next.js Image component ready
 - **Code Splitting**: Automatic with Next.js
 - **SEO**: Meta tags and structured data ready
+- **Animation Performance**: GPU-accelerated transforms
 
 ## 🔗 External Integrations
 
@@ -183,6 +218,12 @@ export default function Component({ prop1, prop2 }: ComponentProps) {
 - **Email Marketing**: Newsletter signup forms ready
 - **Social Media**: Instagram, YouTube, TikTok integration points
 - **Analytics**: Google Analytics setup ready
+
+### Social Media Links
+- **Instagram**: @threeamigos
+- **TikTok**: @threeamigos
+- **YouTube**: @threeamigos
+- **Email**: hello@threeamigos.travel
 
 ## 📚 Documentation
 
@@ -198,6 +239,7 @@ This project is designed for easy collaboration:
 2. Use TypeScript for type safety
 3. Test responsive design on multiple devices
 4. Document new components in COMPONENTS.md
+5. Follow the cosmic design system for futuristic elements
 
 ## 📄 License
 
@@ -208,3 +250,5 @@ This project is created for Three Amigos Travel. All rights reserved.
 **Built with ❤️ for the travel community**
 
 For questions or support, refer to the documentation files or contact the development team.
+
+**Repository**: https://github.com/Abdalkaderdev/three-amigos
