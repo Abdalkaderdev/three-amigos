@@ -1,0 +1,217 @@
+# Cursor Rules for Three Amigos Project
+
+## Project Context
+This is a Next.js 13 travel vlogging website for Three Amigos (Wala, Raza, and Abd). Built with TypeScript, Tailwind CSS, and Framer Motion.
+
+## Code Style & Standards
+
+### TypeScript
+- Use strict TypeScript with proper interfaces
+- Prefer type over interface for simple types
+- Use const assertions where appropriate
+- Always type component props
+
+### React/Next.js
+- Use functional components with hooks
+- Prefer App Router over Pages Router
+- Use 'use client' directive for client components
+- Implement proper error boundaries
+
+### Styling
+- Use Tailwind CSS classes exclusively
+- Follow mobile-first responsive design
+- Use custom CSS variables for brand colors
+- Implement consistent spacing (8px grid)
+
+### Component Structure
+```typescript
+'use client'; // If client component
+
+import React from 'react';
+import { motion } from 'framer-motion';
+
+interface ComponentProps {
+  // Props definition
+}
+
+export const Component = ({ prop }: ComponentProps) => {
+  // Component logic
+  return (
+    // JSX
+  );
+};
+
+export default Component;
+```
+
+## Design System
+
+### Colors
+- Primary: Sky Blue (#00BFFF)
+- Secondary: Coral Pink (#FF6F61)
+- Backgrounds: Soft Beige (#F5F5DC), Warm Beige (#F8F6F0)
+- Text: Gray scale (gray-800 to gray-400)
+
+### Typography
+- Headings: font-astrobia (Orbitron)
+- Body: Default (Inter)
+- Secondary: font-poppins (Poppins)
+
+### Components
+- Use rounded-xl for cards and buttons
+- Implement hover-lift class for interactive elements
+- Add shadow-soft for subtle elevation
+- Use gradient-card for background patterns
+
+## Animation Guidelines
+
+### Framer Motion
+- Use consistent easing: ease-smooth
+- Standard durations: 0.2s (quick), 0.3s (standard), 0.6s (slow)
+- Implement staggered animations for lists
+- Add reduced motion support
+
+### Performance
+- Prefer CSS transforms over layout changes
+- Use will-change sparingly
+- Implement intersection observer for scroll animations
+- Maintain 60fps on mobile devices
+
+## File Organization
+
+### Components
+- Place in /components/ directory
+- Use PascalCase for filenames
+- Export as named export and default
+- Include TypeScript interfaces
+
+### Pages
+- Use App Router structure in /app/
+- Implement proper metadata
+- Use loading.tsx and error.tsx where needed
+- Follow SEO best practices
+
+### Assets
+- Organize in /public/assets/
+- Use descriptive, kebab-case naming
+- Optimize images for web
+- Implement responsive image strategy
+
+## Development Priorities
+
+### Current Focus (Phase 2)
+1. Animation improvements and scroll triggers
+2. Content population (blog posts, team bios)
+3. Mobile experience optimization
+4. Performance tuning
+
+### Code Quality
+- Write self-documenting code
+- Add comments for complex logic
+- Use meaningful variable names
+- Implement proper error handling
+
+### Accessibility
+- Include proper ARIA labels
+- Ensure keyboard navigation
+- Maintain color contrast ratios
+- Provide focus indicators
+
+## AI Assistant Guidelines
+
+### When suggesting code:
+- Follow the established patterns in the codebase
+- Use the design system colors and typography
+- Implement responsive design by default
+- Include proper TypeScript types
+- Consider animation and interaction states
+
+### For new components:
+- Check existing components for similar patterns
+- Use the AnimatedButton, AnimatedIcon patterns
+- Implement proper hover and focus states
+- Include loading and error states where applicable
+
+### For styling:
+- Use Tailwind classes exclusively
+- Follow the responsive breakpoint strategy
+- Implement the 8px spacing grid
+- Use brand colors and typography scale
+
+## Common Patterns
+
+### Button Component
+```typescript
+<AnimatedButton variant="primary" size="md" className="additional-classes">
+  Button Text
+</AnimatedButton>
+```
+
+### Icon Usage
+```typescript
+<AnimatedIcon iconName="Plane" animation="float" size={24} className="text-sky-blue" />
+```
+
+### Card Layout
+```typescript
+<div className="bg-gradient-card rounded-2xl p-6 shadow-soft hover-lift">
+  {/* Card content */}
+</div>
+```
+
+### Responsive Grid
+```typescript
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  {/* Grid items */}
+</div>
+```
+
+## Performance Considerations
+
+### Images
+- Use Next.js Image component
+- Implement proper alt text
+- Use responsive sizes
+- Consider lazy loading
+
+### Animations
+- Use transform and opacity for smooth animations
+- Implement reduced motion preferences
+- Avoid animating layout properties
+- Use GPU acceleration wisely
+
+### Bundle Size
+- Import only needed Lucide icons
+- Use dynamic imports for heavy components
+- Implement code splitting by route
+- Monitor bundle analyzer output
+
+## Testing Strategy
+
+### Manual Testing
+- Test on mobile devices (iOS/Android)
+- Verify animations at 60fps
+- Check accessibility with screen readers
+- Validate responsive breakpoints
+
+### Automated Testing (Future)
+- Unit tests for utility functions
+- Component testing with React Testing Library
+- E2E testing with Playwright
+- Performance testing with Lighthouse CI
+
+## Documentation
+
+### Code Comments
+- Explain complex business logic
+- Document animation timing decisions
+- Note accessibility considerations
+- Include TODO comments for future improvements
+
+### Component Documentation
+- Update COMPONENTS.md for new components
+- Include props interface and usage examples
+- Document animation behaviors
+- Note responsive behavior
+
+Remember: This project prioritizes user experience, performance, and maintainability. Always consider the impact on mobile users and ensure accessibility compliance.
